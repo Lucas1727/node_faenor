@@ -1,13 +1,61 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to Lucas' <%= title %> page</p>
-    <br>
-    <p>HI</p>
-  </body>
+
+<!-- Head -->
+<%- include('partials/head'); %>
+
+<head>
+    <link rel="stylesheet" href="stylesheets/index.css" />
+</head>
+
+<body>
+    <div id="page-container">
+
+        <!-- Nav -->
+        <%- include('partials/nav'); %>
+
+        <div class="parallax">
+            <div class="parallax__layer parallax__layer--back">
+                <div id="background">
+                </div>
+            </div>
+
+            <div class="parallax__layer parallax__layer--base">
+
+
+                <!-- Header -->
+                <header id="header">
+                    <div class="logo">
+                        <div>
+                            <h1><a href="/">Faenor</a></h1>
+                            <p>Lettings</p>
+                        </div>
+                    </div>
+                </header>
+
+
+                <!-- Banner -->
+                <section id="banner">
+                    <div class="content">
+                        <h2>About us</h2>
+
+                        <br>
+
+                        <p>Faenor's 'self-catering' maisonette forms part of a beautiful Grade 2* listed Georgian Manor. This private residence nestled between the foothills of the Preseli mountains and our stunning Pembrokeshire coastline, and encompasses large gardens, woodland, ponds as well as our private heated indoor swimming pool and hot tub.</p>
+
+                        <p>The small town of Narberth is just 3 miles away and offers delicatessens, groceries stores, award winning butchers and cafes' .With a selection of boutiques and galleries, tearooms, restaurants, public houses, local pottery and its own castle, this historic town is full of character and has much to offer. The County Town of Haverfordwest lies 12 miles away and features local farmers markets, leisure centre, skateboard park as well as a cinema and larger department stores.</p>
+                    </div>
+                </section>
+
+                <!-- Footer -->
+                <%- include('partials/footer'); %>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="javascripts/main.js"></script>
+
+    </div>
+</body>
 </html>

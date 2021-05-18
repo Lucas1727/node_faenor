@@ -1,11 +1,61 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to Info <%= title %> page</p>
-  </body>
+
+<!-- Head -->
+<%- include('partials/head'); %>
+
+<head>
+    <link rel="stylesheet" href="stylesheets/info.css" />
+</head>
+
+<body>
+    <div id="page-container">
+
+        <!-- Nav -->
+        <%- include('partials/nav'); %>
+
+        <div id="alt_background"></div>
+
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <div>
+                    <h1><a href="/">Information</a></h1>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="content">
+
+                <h3>A Few More Details</h3>
+
+                <p>Faenor offers an ideal base for exploring our beautiful county with excellent walking, beaches, fishing, sailing & golf all nearby. Culture & Heritage opportunities abound with many castles to explore such as Pembroke (birth place of the Tudors), the city of St Davids featuring its magnificent Cathedral, a visit to Dylan Thomas' boathouse in Laugharne or perhaps an evening at The Torch Theatre. With food festivals, garden open days and host to many sporting events our county offers something for everyone.</p>
+
+                <p>Oakwood Theme Park, and the Blue Lagoon Waterpark are on our doorstep with more opportunities for family fun at nearby Folly Farm or Heatherton, not to mention the spectacular choice of beaches (41 holding blue flags for 2015) along our 186 miles of Pembrokeshire Coast National Path.</p>
+
+                <p>Please note this property has a spiral staircase accessing the bedrooms/bathroom from the main living room/kitchen/diner which may not suit all. Beds for 4 adults, Cot available upon request for additional infant. - Cot may be located in master bedroom or twin bedroom - please specify upon reservation.</p>
+
+                <p>Linens are provided for use within the house, although we do request that guests bring their own towels to use at the beach or pool and hot tub.</p>
+
+                <p>The maisonette is the only rental at this address.</p>
+
+                <p>Please note this is a strictly NON SMOKING property and sadly we are also unable to welcome pets. We do have cats and a dog of our own, who whilst not having access to the maisonette, might well want to say hello during your stay!</p>
+
+                <p>Entry from 4 p.m. at the start of your vacation and exit by 10.00 a.m. on final day unless otherwise arranged. Please note that in peak season & school holidays changeover will ordinarily be on a Saturday., however we will try our best to accommodate other arrival dates where - ever possible.</p>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <%- include('partials/footer'); %>
+
+        <!-- Scripts -->
+        <script src="javascripts/main.js"></script>
+
+    </div>
+</body>
 </html>

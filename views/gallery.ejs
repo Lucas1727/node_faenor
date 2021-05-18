@@ -1,11 +1,46 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to Gallery <%= title %> page</p>
-  </body>
+
+<!-- Head -->
+<%- include('partials/head'); %>
+
+<head>
+    <link rel="stylesheet" href="stylesheets/gallery.css" />
+</head>
+
+<body>
+    <div id="page-container">
+
+        <!-- Nav -->
+        <%- include('partials/nav'); %>
+
+        <div id="alt_background"></div>
+
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <div>
+                    <h1><a href="/">Gallery</a></h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banner -->
+        <section id="banner">
+            <div class="content">
+
+                <h3>What We Offer At A Glance</h3>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <%- include('partials/footer'); %>
+
+        <!-- Scripts -->
+        <script src="javascripts/main.js"></script>
+
+    </div>
+</body>
 </html>

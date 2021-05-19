@@ -1,9 +1,28 @@
 * {box-sizing:border-box}
 
+#banner {
+    position: relative;
+    background-color: rgba(25, 25, 25, 0.5);
+    min-height: 50vh;
+    height: auto;
+}
+
+/* Footer */
+
+#footer {
+    position: absolute;
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: center;
+    height: 6vh;
+}
+
 /* Slideshow container */
 .slideshow-container {
   position: relative;
   margin: auto;
+  max-width: 1024px;
 }
 
 /* Hide the images by default */

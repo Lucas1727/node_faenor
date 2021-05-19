@@ -6,42 +6,57 @@
 <%- include('partials/head'); %>
 
 <head>
-    <link rel="stylesheet" href="stylesheets/test.css" />
+  <link rel="stylesheet" href="stylesheets/test.css" />
 </head>
 
 <body>
-    <div id="page-container">
+  <div id="page-container">
 
-        <!-- Nav -->
-        <%- include('partials/nav'); %>
+    <!-- Nav -->
+    <%- include('partials/nav'); %>
 
-        <div id="alt_background"></div>
+    <div id="alt_background"></div>
 
-        <!-- Header -->
-        <header id="header">
-            <div class="logo">
-                <div>
-                    <h1><a href="/">Testimonials</a></h1>
-                </div>
-            </div>
-        </header>
+    <!-- Header -->
+    <header id="header">
+      <div class="logo">
+        <div>
+          <h1><a href="/">Testimonials</a></h1>
+        </div>
+      </div>
+    </header>
 
 
-        <!-- Banner -->
-        <section id="banner">
-            <div class="content">
+    <!-- Banner -->
+    <section id="banner">
+      <div class="content">
 
-                <h3>Here's What Guests Have To Say!</h3>
+        <h3>Here's What Guests Have To Say!</h3>
 
-            </div>
-        </section>
+        <form action="/add" method="POST">
+          <fieldset>
+            <h3>Add Review</h3>
+            <label>Name: </label>
+            <input type ="text" id = 'usrName' name="user" required>
+            <br><br>
+            <label>Review: </label>
+            <br>
+            <textarea type="text" id = "comment" name="comment" rows="4" cols="50" required></textarea>
+            <br><br>
+            <button type ="reset">Reset</button>
+            <button type ="submit">Submit</button>
+          </fieldset>
+        </form>
 
-        <!-- Footer -->
-        <%- include('partials/footer'); %>
+      </div>
+    </section>
 
-        <!-- Scripts -->
-        <script src="javascripts/main.js"></script>
+    <!-- Footer -->
+    <%- include('partials/footer'); %>
 
-    </div>
+    <!-- Scripts -->
+    <script src="javascripts/main.js"></script>
+
+  </div>
 </body>
 </html>

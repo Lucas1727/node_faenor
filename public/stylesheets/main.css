@@ -212,13 +212,13 @@ ul.special li a:hover {
     background-color: rgba(25, 25, 25, 0.5);
     min-height: 50vh;
     height: 90vh;
-    margin-top: 5vh;
+    margin-top: 3vh;
 }
 
 #banner .content {
     position: relative;
     text-align: center;
-    padding: 3em 5em 1em 5em;
+    padding: 1em 5em 2em 5em;
 }
 
 #banner .content h2 {

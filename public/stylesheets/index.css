@@ -1,115 +1,115 @@
 body {
-    font-family: 'Shippori Mincho B1', serif;
-    font-weight: 400;
-    color: #6b7770;
-    font-size: 12pt;
-    background: #fff;
-    margin: 0;
-    padding: 0px;
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  font-family: 'Shippori Mincho B1', serif;
+  font-weight: 400;
+  color: #6b7770;
+  font-size: 12pt;
+  background: #fff;
+  margin: 0;
+  padding: 0px;
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
+  0% {
+    opacity: 0;
+  }
 
-    100% {
-        opacity: 1;
-    }
+  100% {
+    opacity: 1;
+  }
 }
 
 #background {
-    position: relative;
-    min-height: 150%;
-    min-width: 150%;
-    height: auto;
-    width: auto;
-    filter: blur(4px);
+  position: relative;
+  min-height: 150%;
+  min-width: 150%;
+  height: auto;
+  width: auto;
+  filter: blur(4px);
 }
 
 #header {
-    text-align: center;
-    font-family: 'Shippori Mincho B1', serif;
-    text-transform: uppercase;
-    position: absolute;
-    display: inline-block;
-    margin-top: 30vh;
-    width: 100%;
-    line-height: 1em;
+  text-align: center;
+  font-family: 'Shippori Mincho B1', serif;
+  text-transform: uppercase;
+  position: absolute;
+  display: inline-block;
+  margin-top: 30vh;
+  width: 100%;
+  line-height: 1em;
 }
 
 #header .logo h1 a {
-    font-size: 5em;
+  font-size: 5em;
 }
 
 #header p {
-    font-size: 2em;
-    color: rgba(0, 0, 0, 0.6);
-    margin-top: 0px;
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.6);
+  margin-top: 0px;
 }
 
 #banner {
-    position: relative;
-    background-color: rgba(25, 25, 25, 0.5);
-    min-height: 94vh;
-    margin-top: 100vh;
+  position: relative;
+  background-color: rgba(25, 25, 25, 0.5);
+  min-height: 94vh;
+  margin-top: 100vh;
 }
 
 #banner .content h2 {
-    color: #fff;
-    font-size: 2;
+  color: #fff;
+  font-size: 2;
 }
 
 
 @media screen and (max-width: 640px) {
 
-    /* Basic */
+  /* Basic */
 
-    #background {
-        height: 200vh;
-        margin-left: -1vw;
-    }
+  #background {
+    height: 200vh;
+    margin-left: -1vw;
+  }
 
-    .navbar {
-        text-align: center;
-    }
+  .navbar {
+    text-align: center;
+  }
 
-    #header {
-        padding-top: 5em;
-    }
+  #header {
+    padding-top: 5em;
+  }
 
-    #header .logo h1 a {
-        font-size: 2.5em;
-    }
+  #header .logo h1 a {
+    font-size: 2.5em;
+  }
 
-    #header p {
-        font-size: 1.5em;
-    }
+  #header p {
+    font-size: 1.5em;
+  }
 
-    #banner {
-        margin-top: 100vh;
-        background-color: rgba(25, 25, 25, 0.5);
-        min-height: 100vh;
-    }
+  #banner {
+    margin-top: 100vh;
+    background-color: rgba(25, 25, 25, 0.5);
+    min-height: 100vh;
+  }
 
-    #banner .content {
-        padding: 2em 1em 1em 1em;
-    }
+  #banner .content {
+    padding: 2em 1em 1em 1em;
+  }
 
-    #banner .content h2 {
-        color: #fff;
-        font-size: 1.5em;
-    }
+  #banner .content h2 {
+    color: #fff;
+    font-size: 1.5em;
+  }
 
-    #banner .content p {
-        color: #fff;
-        font-size: 0.75em;
-    }
+  #banner .content p {
+    color: #fff;
+    font-size: 0.75em;
+  }
 
-    #footer {
-        height: 6vh;
-    }
+  #footer {
+    height: 6vh;
+  }
 }

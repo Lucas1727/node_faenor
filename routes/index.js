@@ -3,27 +3,33 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
 });
 
 /* GET info page. */
 router.get('/info', function(req, res) {
-  res.render('info', { title: 'Express' });
+  res.render('info');
 });
 
 /* GET gallery page. */
 router.get('/gallery', function(req, res) {
-  res.render('gallery', { title: 'Express' });
+  res.render('gallery');
 });
 
 /* GET map page. */
 router.get('/map', function(req, res) {
-  res.render('map', { title: 'Express' });
+  res.render('map');
 });
 
-/* GET testimonial page. */
+/* GET test page. */
 router.get('/test', function(req, res) {
-  res.render('test', { title: 'Express' });
+  var db = req.db;
+  var collection = db.get('usercomments');
+  collection.find({},{},function(e,docs){
+    res.render('test', {
+      "comments" : docs
+    });
+  });
 });
 
 module.exports = router;

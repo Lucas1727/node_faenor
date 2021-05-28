@@ -26,14 +26,31 @@
       </div>
     </header>
 
-
     <!-- Banner -->
     <section id="banner">
       <div class="content">
 
         <h3>Here's What Guests Have To Say!</h3>
 
-        <form action="/add" method="POST">
+        <div class="comment">
+          <b><%- comments[comments.length-1].name %> </b>
+          <p><%- comments[comments.length-1].comment %></p>
+          <p id="comment1"></p>
+        </div>
+
+        <div class="comment">
+          <b><%- comments[comments.length-2].name %> </b>
+          <p><%- comments[comments.length-2].comment %></p>
+          <p id="comment2"></p>
+        </div>
+
+        <div class="comment">
+          <b><%- comments[comments.length-3].name %> </b>
+          <p><%- comments[comments.length-3].comment %></p>
+          <p id="comment3"></p>
+        </div>
+
+        <form action="/add" method="POST" onsubmit="mySubmit()">
           <fieldset>
             <h3>Add Review</h3>
             <label>Name: </label>
@@ -44,7 +61,7 @@
             <textarea type="text" id = "comment" name="comment" rows="4" cols="50" required></textarea>
             <br><br>
             <button type ="reset">Reset</button>
-            <button type ="submit">Submit</button>
+            <input type="submit" value="Submit">
           </fieldset>
         </form>
 
@@ -56,7 +73,8 @@
 
     <!-- Scripts -->
     <script src="javascripts/main.js"></script>
-
+    <script src="javascripts/test.js"></script>
+    <%- include('partials/testScript'); %>
   </div>
 </body>
 </html>

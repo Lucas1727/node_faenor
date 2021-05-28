@@ -1,6 +1,32 @@
-form label {
-  font-family: 'Shippori Mincho B1', serif;
-  font-weight: 400;
+#banner .comment{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5em 1em 0.2em 1em;
+  border-style:none;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+
+#banner .content form{
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5em 0 0.2em 0;
+  border-style:none;
+  border-radius: 5px;
+  margin-top: 1em;
+}
+
+#banner .content b {
   color: #fff;
-  font-size: 12pt;
+  font-size: 1em;
+  text-decoration: underline;
+}
+
+#banner .content label {
+  color: #fff;
+  font-size: 1em;
+}
+
+#banner .content fieldset{
+  border-style:none;
 }

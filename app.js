@@ -7,7 +7,7 @@ var PORT = 8080
 
 // New Code
 var monk = require('monk');
-var db = monk('192.168.1.135:27017/Apollo');
+var db = monk('192.168.1.135:27017/faenor');
 
 var indexRouter = require('./routes/index');
 var infoRouter = require('./routes/info');
@@ -30,8 +30,8 @@ app.use(express.json());
 
 // Make our db accessible to our router
 app.use(function(req,res,next){
-    req.db = db;
-    next();
+  req.db = db;
+  next();
 });
 
 app.use('/', indexRouter);
@@ -41,6 +41,36 @@ app.use('/map', mapRouter);
 app.use('/test', testRouter);
 
 app.listen(PORT, () => console.log(`🚀 Webhook Server running on port ${PORT}`));
+
+app.post('/add', (req,res) => {
+  console.log(req.body);
+
+  var db = req.db;
+
+  var name = req.body.user;
+  var comment = req.body.comment;
+  var addedDate = new Date();
+
+  var collection = db.get('usercomments');
+
+  collection.insert({
+    "name" : name,
+    "comment" : comment,
+    "addedDate" : addedDate
+  }, function	(err,doc) {
+    if (err) {
+      console.log("Failed to add data to DB");
+    } else {
+      console.log("Successfully added data to DB")
+    }
+  });
+
+  console.log("Name: " + name + ", Comment: " + comment);
+
+  res.redirect('/test')
+  res.json({success: true});
+  res.status(200).end();
+})
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

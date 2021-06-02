@@ -1,18 +1,8 @@
 <script>
-  function myDate(date) {
 
-    var n1 = new Date(date);
 
-    d1 = n1.getDate();
-    m1 = n1.getMonth() + 1;
-    y1 = n1.getFullYear();
+  //document.getElementById("comment1").innerHTML = myDate("<%= comments[comments.length-1].addedDate %>");
+  //document.getElementById("comment2").innerHTML = myDate("<%= comments[comments.length-2].addedDate %>");
+  //document.getElementById("comment3").innerHTML = myDate("<%= comments[comments.length-3].addedDate %>");
 
-    var comAddDate1 = innerHTML = (d1 + "/" + m1 + "/" + y1);
-
-    return comAddDate1;
-  }
-
-  document.getElementById("comment1").innerHTML = myDate("<%= comments[comments.length-1].addedDate %>");
-  document.getElementById("comment2").innerHTML = myDate("<%= comments[comments.length-2].addedDate %>");
-  document.getElementById("comment3").innerHTML = myDate("<%= comments[comments.length-3].addedDate %>");
 </script>

@@ -5,6 +5,22 @@
 <!-- Head -->
 <%- include('partials/head'); %>
 
+<script>
+  function myDate(date) {
+
+    var n1 = new Date(date);
+
+    d1 = n1.getDate();
+    m1 = n1.getMonth() + 1;
+    y1 = n1.getFullYear();
+
+    var newDate = innerHTML = (d1 + "/" + m1 + "/" + y1);
+    console.log(newDate);
+
+    return newDate;
+  }
+</script>
+
 <head>
   <link rel="stylesheet" href="stylesheets/test.css" />
 </head>
@@ -32,49 +48,41 @@
 
         <h3>Here's What Guests Have To Say!</h3>
 
-        <div class="comment">
-          <b><%- comments[comments.length-1].name %> </b>
-          <p><%- comments[comments.length-1].comment %></p>
-          <p id="comment1"></p>
+        <% var int %>
+
+        <% for (int = 0; int < comments.length ; int++) { %>
+          <div class="comment">
+            <b><%= comments[int].name %> </b>
+            <p><%= comments[int].comment %></p>
+            <p><script> document.write(myDate("<%= comments[int].addedDate %>"))</script></p>
+          </div>
+          <% } %>
+
+          <form action="/add" method="POST" onsubmit="mySubmit()">
+            <fieldset>
+              <h3>Add Review</h3>
+              <label>Name: </label>
+              <input type ="text" id = 'usrName' name="user" required>
+              <br><br>
+              <label>Review: </label>
+              <br>
+              <textarea type="text" id = "comment" name="comment" rows="4" cols="50" required></textarea>
+              <br><br>
+              <button type ="reset">Reset</button>
+              <input type="submit" value="Submit">
+            </fieldset>
+          </form>
+
         </div>
+      </section>
 
-        <div class="comment">
-          <b><%- comments[comments.length-2].name %> </b>
-          <p><%- comments[comments.length-2].comment %></p>
-          <p id="comment2"></p>
-        </div>
+      <!-- Footer -->
+      <%- include('partials/footer'); %>
 
-        <div class="comment">
-          <b><%- comments[comments.length-3].name %> </b>
-          <p><%- comments[comments.length-3].comment %></p>
-          <p id="comment3"></p>
-        </div>
-
-        <form action="/add" method="POST" onsubmit="mySubmit()">
-          <fieldset>
-            <h3>Add Review</h3>
-            <label>Name: </label>
-            <input type ="text" id = 'usrName' name="user" required>
-            <br><br>
-            <label>Review: </label>
-            <br>
-            <textarea type="text" id = "comment" name="comment" rows="4" cols="50" required></textarea>
-            <br><br>
-            <button type ="reset">Reset</button>
-            <input type="submit" value="Submit">
-          </fieldset>
-        </form>
-
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <%- include('partials/footer'); %>
-
-    <!-- Scripts -->
-    <script src="javascripts/main.js"></script>
-    <script src="javascripts/test.js"></script>
-    <%- include('partials/testScript'); %>
-  </div>
-</body>
-</html>
+      <!-- Scripts -->
+      <script src="javascripts/main.js"></script>
+      <script src="javascripts/test.js"></script>
+      <%- include('partials/testScript'); %>
+    </div>
+  </body>
+  </html>

@@ -63,6 +63,9 @@ body {
   font-size: 2;
 }
 
+#footer {
+  bottom: auto;
+}
 
 @media screen and (max-width: 640px) {
 
@@ -92,7 +95,7 @@ body {
   #banner {
     margin-top: 100vh;
     background-color: rgba(25, 25, 25, 0.5);
-    min-height: 100vh;
+    min-height: 92vh;
   }
 
   #banner .content {
@@ -110,6 +113,6 @@ body {
   }
 
   #footer {
-    height: 6vh;
+    height: 8vh;
   }
 }

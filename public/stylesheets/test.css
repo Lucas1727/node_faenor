@@ -5,6 +5,9 @@
   border-style:none;
   border-radius: 5px;
   margin-top: 1em;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #banner .content form{
@@ -14,6 +17,9 @@
   border-style:none;
   border-radius: 5px;
   margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 720px;
 }
 
 #banner .content b {
@@ -30,3 +36,25 @@
 #banner .content fieldset{
   border-style:none;
 }
+
+input[type=text] {
+  width: 60%;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+textarea[type=text] {
+  width: 80%;
+  display: inline-block;
+  border: 1px solid #fff;
+  border-radius: 4px;
+}
+
+@media screen and (max-width: 640px) {
+
+  /* Basic */
+
+  #header .logo h1 a {
+    font-size: 1.5em;
+  }

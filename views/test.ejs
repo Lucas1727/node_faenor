@@ -4,22 +4,7 @@
 
 <!-- Head -->
 <%- include('partials/head'); %>
-
-<script>
-  function myDate(date) {
-
-    var n1 = new Date(date);
-
-    d1 = n1.getDate();
-    m1 = n1.getMonth() + 1;
-    y1 = n1.getFullYear();
-
-    var newDate = innerHTML = (d1 + "/" + m1 + "/" + y1);
-    console.log(newDate);
-
-    return newDate;
-  }
-</script>
+<script src="javascripts/testDate.js"></script>
 
 <head>
   <link rel="stylesheet" href="stylesheets/test.css" />
@@ -82,7 +67,6 @@
       <!-- Scripts -->
       <script src="javascripts/main.js"></script>
       <script src="javascripts/test.js"></script>
-      <%- include('partials/testScript'); %>
     </div>
   </body>
   </html>

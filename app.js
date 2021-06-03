@@ -48,15 +48,19 @@ app.post('/add', (req,res) => {
   var db = req.db;
 
   var name = req.body.user;
+  var title = req.body.title;
   var comment = req.body.comment;
   var addedDate = new Date();
+  var rating = parseInt(req.body.rating);
 
   var collection = db.get('usercomments');
 
   collection.insert({
     "name" : name,
+    "title" : title,
     "comment" : comment,
-    "addedDate" : addedDate
+    "addedDate" : addedDate,
+    "rating" : rating
   }, function	(err,doc) {
     if (err) {
       console.log("Failed to add data to DB");
@@ -65,7 +69,7 @@ app.post('/add', (req,res) => {
     }
   });
 
-  console.log("Name: " + name + ", Comment: " + comment);
+  console.log("Name: " + name + ", Comment: " + comment + "Title: " + title + ", Added Date: " + addedDate + "Rating: " + rating);
 
   res.redirect('/test')
   res.json({success: true});

@@ -11,3 +11,20 @@ function myDate(date) {
 
   return newDate;
 }
+
+function myRating(rating) {
+
+  if(rating == 5){
+    var stars = "&#9733; &#9733; &#9733; &#9733; &#9733;";
+  } else if(rating == 4){
+    var stars = "&#9733; &#9733; &#9733; &#9733; &#9734;";
+  } else if(rating == 3){
+    var stars = "&#9733; &#9733; &#9733; &#9734; &#9734;";
+  } else if(rating == 2){
+    var stars = "&#9733; &#9733; &#9734; &#9734; &#9734;";
+  } else if(rating == 1){
+    var stars = "&#9733; &#9734; &#9734; &#9734; &#9734;";
+  }
+
+  return stars;
+}

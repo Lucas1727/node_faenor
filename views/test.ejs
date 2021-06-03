@@ -37,9 +37,10 @@
 
         <% for (int = 0; int < comments.length ; int++) { %>
           <div class="comment">
-            <b><%= comments[int].name %> </b>
+            <b><%= comments[int].title %> </b>
             <p><%= comments[int].comment %></p>
-            <p><script> document.write(myDate("<%= comments[int].addedDate %>"))</script></p>
+            <p><script> document.write(myRating("<%= comments[int].rating %>"))</script></p>
+            <p><%= comments[int].name %> - <script> document.write(myDate("<%= comments[int].addedDate %>"))</script></p>
           </div>
           <% } %>
 
@@ -49,8 +50,23 @@
               <label>Name: </label>
               <input type ="text" id = 'usrName' name="user" required>
               <br><br>
+              <label>Review Title: </label>
+              <input type ="text" id = 'title' name="title" required>
+              <br><br>
               <label>Review: </label>
-              <textarea type="text" id = "comment" name="comment" rows="4" cols="50" required></textarea>
+              <textarea type="text" id = "comment" name="comment" rows="6" cols="50" required></textarea>
+              <br><br>
+              <label>Rating: </label>
+              <input type="radio" id="one" name="rating" value=1>
+              <label for="one">1 &#9733;</label>
+              <input type="radio" id="two" name="rating" value=2>
+              <label for="two">2 &#9733;</label>
+              <input type="radio" id="three" name="rating" value=3>
+              <label for="three">3 &#9733;</label>
+              <input type="radio" id="four" name="rating" value=4>
+              <label for="four">4 &#9733;</label>
+              <input type="radio" id="five" name="rating" value=5 checked="checked">
+              <label for="one">5 &#9733;</label>
               <br><br>
               <button type ="reset">Reset</button>
               <input type="submit" value="Submit">
